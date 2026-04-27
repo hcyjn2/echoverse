@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-label="Nox River trail story">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#bae6fd"/>
+      <stop offset=".7" stop-color="#bbf7d0"/>
+      <stop offset="1" stop-color="#fefce8"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="720" fill="url(#sky)"/>
+  <path d="M0 480l172-190 112 130 150-218 146 216 110-104 270 222v184H0z" fill="#166534" opacity=".72"/>
+  <path d="M0 540c170-88 327-101 470-40s306 46 490-45v265H0z" fill="#14532d"/>
+  <path d="M470 720c-28-119-4-205 72-258" stroke="#fef3c7" stroke-width="28" fill="none" stroke-linecap="round"/>
+  <circle cx="286" cy="160" r="58" fill="#fef08a" opacity=".9"/>
+  <path d="M574 446l30 72M604 518l-54 66M604 518l60 64M574 446l-42 38M574 446l48 36" stroke="#052e16" stroke-width="14" stroke-linecap="round"/>
+</svg>

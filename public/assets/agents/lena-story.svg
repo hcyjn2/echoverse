@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-label="Lena Vale fashion story">
+  <rect width="960" height="720" fill="#f8fafc"/>
+  <path d="M0 0h960v230H0z" fill="#e2e8f0"/>
+  <path d="M110 120h230v480H110z" fill="#cbd5e1"/>
+  <path d="M620 94h218v506H620z" fill="#94a3b8"/>
+  <path d="M418 142h128v458H418z" fill="#111827"/>
+  <path d="M452 172h60v90h-60z" fill="#f8fafc"/>
+  <path d="M390 600h184l-34-280h-116z" fill="#1f2937"/>
+  <path d="M118 602h724" stroke="#0f172a" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="230" cy="250" r="42" fill="#f59e0b" opacity=".78"/>
+  <path d="M684 174h88M684 254h88M684 334h88" stroke="#f8fafc" stroke-width="10" opacity=".75"/>
+</svg>

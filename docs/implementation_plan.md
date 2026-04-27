@@ -23,28 +23,29 @@
 
 **Timeline:** Days 1–5  
 **Goal:** Wallet auth works. A chat completion returns from 0G Compute testnet. Stubbed feed is visible.
+**Status:** Signed off for Phase 1 on April 27, 2026.
 
 ## Day 1
 
-- [ ] **TASK — Coder A:** Scaffold Next.js 15 + Tailwind + shadcn/ui + ethers v6. Install `@0glabs/0g-serving-broker` and `@0glabs/0g-ts-sdk`.
+- [x] **TASK — Coder A:** Scaffold Next.js 15 + Tailwind + shadcn/ui + ethers v6. Install `@0glabs/0g-serving-broker` and `@0glabs/0g-ts-sdk`.
   - **Deliverable:** Dev repo running.
 
-- [ ] **TASK — Coder B:** Create shared 0G testnet wallet. Claim faucet. Document env vars:
+- [x] **TASK — Coder B:** Create shared 0G testnet wallet. Claim faucet. Document env vars:
   - `PRIVATE_KEY`
   - `RPC_URL`
   - `INDEXER_RPC`
   - `BROKER_NETWORK=testnet`
   - **Deliverable:** `.env.local` template.
 
-- [ ] **TASK — Coder C:** Generate 6 agent personas + 12 visual assets, including avatars and story images, with AI image tools.
+- [x] **TASK — Coder C:** Generate 6 agent personas + 12 visual assets, including avatars and story images, with AI image tools.
   - **Deliverable:** `/public/assets/` populated.
 
 ## Day 2
 
-- [ ] **TASK — Coder A:** Build WalletConnect component using MetaMask/Rabby, forcing 0G Galileo Chain ID `16602`.
+- [x] **TASK — Coder A:** Build WalletConnect component using MetaMask/Rabby, forcing 0G Galileo Chain ID `16602`.
   - **Deliverable:** Wallet button + network guard.
 
-- [ ] **TASK — Coder B:** Draft `EchoAgentCore.sol`:
+- [x] **TASK — Coder B:** Draft `EchoAgentCore.sol`:
   - `registerAgent`
   - `tipAgent`
   - `unlockVIP`
@@ -52,7 +53,7 @@
   - Keep it minimal.
   - **Deliverable:** Solidity file ready.
 
-- [ ] **TASK — Coder C:** Build app shell layout:
+- [x] **TASK — Coder C:** Build app shell layout:
   - Home
   - Search
   - Post
@@ -63,20 +64,26 @@
 
 ## Day 3
 
-- [ ] **TASK — Coder A:** 0G Inference Spike. Create standalone script using `createZGComputeNetworkBroker` to:
+- [x] **TASK — Coder A:** 0G Inference Spike. Create standalone script using `createZGComputeNetworkBroker` to:
   - Discover `qwen-2.5-7b-instruct` provider
   - Acknowledge signer
   - Return a chat completion
   - **Deliverable:** `scripts/inference-spike.ts` prints an LLM response.
+  - [x] **TEST — Coder A:** Add funded Galileo `PRIVATE_KEY` to `.env.local`.
+  - [x] **TEST — Coder A:** Run `npm run inference:spike`.
+  - [x] **TEST — Coder A:** Confirm provider discovery selects a Qwen service.
+  - [x] **TEST — Coder A:** Confirm the script prints an LLM response.
 
-- [ ] **TASK — Coder B:** Deploy `EchoAgentCore.sol` to Galileo. Seed 6 agents:
+- [x] **TASK — Coder B:** Deploy `EchoAgentCore.sol` to Galileo. Seed 6 agents:
   - Wallet
   - Metadata key
   - Name
   - Tags
+  - Contract: `0xa8C216745b32B0b09bD17887dEa4CA4Ddf0bf017`
+  - Explorer: `https://chainscan-galileo.0g.ai/address/0xa8C216745b32B0b09bD17887dEa4CA4Ddf0bf017`
   - **Deliverable:** Verified contract on explorer.
 
-- [ ] **TASK — Coder C:** Build static Onboarding UI:
+- [x] **TASK — Coder C:** Build static Onboarding UI:
   - Preferences
   - Age/gender
   - Tags
@@ -84,37 +91,54 @@
 
 ## Day 4
 
-- [ ] **TASK — Coder A:** Wrap the spike into `lib/inference-broker.ts` as a singleton broker. Build `POST /api/inference/chat` route:
+- [x] **TASK — Coder A:** Wrap the spike into `lib/inference-broker.ts` as a singleton broker. Build `POST /api/inference/chat` route:
   - Accepts `{messages, model?}`
   - Returns `{reply}`
+  - Tested live response from Qwen provider `0xa48f01287233509FD694a22Bf840225062E67836`.
   - **Deliverable:** Backend LLM proxy working.
 
-- [ ] **TASK — Coder B + Coder A:** Write `lib/0g-kv.ts` server helper:
+- [x] **TASK — Coder B + Coder A:** Write `lib/0g-kv.ts` server helper:
   - `writeKV(key, value)`
   - `readKV(key)`
   - Use fixed `streamId`
   - Test write onboarding data
+  - Helper, onboarding API, and smoke script are implemented.
+  - Live 0G Storage writes are proven through a local Flow ABI compatibility shim because `@0glabs/0g-ts-sdk@0.3.3` submits the old Flow ABI.
+  - Public KV RPC reads through `KV_RPC=http://3.101.147.150:6789` are unavailable and tracked in `docs/BACKLOG.md`; Phase 1 proceeds with `STORAGE_MODE=auto` and local mirror readback.
   - **Deliverable:** KV wrapper proven.
 
-- [ ] **TASK — Coder C:** Stub home feed + story carousel using hardcoded agent JSON.
+- [x] **TASK — Coder C:** Stub home feed + story carousel using hardcoded agent JSON.
   - **Deliverable:** Feed renders.
 
 ## Day 5 — Weekend
 
-- [ ] **TASK — All:** Integration checkpoint:
-  - [ ] **TEST — Coder A:** Test wallet → onboarding → KV write → broker chat.
-  - [ ] **TEST — Coder B:** Verify contract TXs on explorer.
-  - [ ] **TASK — Coder C:** Polish nav states.
-  - [ ] **TEST — Advisor:** Review repo structure and security.
-  - [ ] **TEST — All:** Confirm no leaked keys.
+- [x] **TASK — All:** Integration checkpoint:
+  - [x] **TEST — Coder A:** Test wallet → onboarding → KV write → broker chat.
+    - Wallet/profile route is available, onboarding API writes live 0G Storage transactions in `STORAGE_MODE=auto`, and broker chat returns a verified 0G Compute response.
+    - Browser onboarding produced live 0G Storage txs `0x0540c0ae2ceb96aca4bcfd788007b7634dd9b086fb12e7126c2215c60dbb94fd` and `0x469984527ad3573c090be20f51da8eddf59e3f544985a24928e155f6e7de9cf2`.
+    - Readback uses local mirror because public KV RPC is unavailable.
+  - [x] **TEST — Coder B:** Verify contract TXs on explorer.
+    - Explorer page returns `200` for `0xa8C216745b32B0b09bD17887dEa4CA4Ddf0bf017`.
+  - [x] **TASK — Coder C:** Polish nav states.
+  - [x] **TEST — Advisor:** Review repo structure and security.
+  - [x] **TEST — All:** Confirm no leaked keys.
   - **Deliverable:** Backbone signed off.
 
 ## Phase 1 Success Gate
 
-- [ ] **TEST:** User can connect wallet.
-- [ ] **TEST:** User can finish onboarding.
-- [ ] **TEST:** User can hit `/api/inference/chat`.
-- [ ] **TEST:** User receives a response from 0G Compute testnet.
+- [x] **TEST:** User can connect wallet.
+- [x] **TEST:** User can finish onboarding.
+- [x] **TEST:** User can hit `/api/inference/chat`.
+- [x] **TEST:** User receives a response from 0G Compute testnet.
+
+**Phase 1 sign-off notes:**
+
+- `npm run lint` passes.
+- `npm run build` passes.
+- `npm run inference:spike` returns a verified Qwen response from provider `0xa48f01287233509FD694a22Bf840225062E67836`.
+- `npm run kv:smoke` writes to live 0G Storage and reads back through the local mirror.
+- `POST /api/onboarding` returns live 0G Storage txs with `backend: "0g"` and `mirroredLocal: true`.
+- Known caveat: true public KV RPC readback is blocked by an unavailable public KV node and is tracked in `docs/BACKLOG.md`.
 
 ---
 

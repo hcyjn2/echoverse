@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Aria Lune avatar">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#312e81"/>
+      <stop offset=".5" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#f0abfc"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="64" fill="url(#bg)"/>
+  <circle cx="60" cy="54" r="4" fill="#fff" opacity=".8"/>
+  <circle cx="184" cy="72" r="5" fill="#fff" opacity=".65"/>
+  <path d="M55 199c7-43 31-67 65-67 36 0 59 24 66 67z" fill="#581c87"/>
+  <circle cx="120" cy="98" r="43" fill="#ead0bd"/>
+  <path d="M75 103c-2-41 20-67 55-70 28 13 42 36 42 69-30-20-62-20-97 1z" fill="#2e1065"/>
+  <path d="M91 105c8-4 16-4 24 0" stroke="#2e1065" stroke-width="4" stroke-linecap="round"/>
+  <path d="M127 105c8-4 16-4 24 0" stroke="#2e1065" stroke-width="4" stroke-linecap="round"/>
+  <path d="M107 124c9 6 19 6 28 0" stroke="#86198f" stroke-width="5" stroke-linecap="round" fill="none"/>
+</svg>

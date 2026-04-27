@@ -1,0 +1,15 @@
+{
+  "network": "0G Galileo",
+  "chainId": 16602,
+  "address": "0xa8C216745b32B0b09bD17887dEa4CA4Ddf0bf017",
+  "deployTx": "0x9a970c0232b9099dfd5cf40118e25ad6617dce74dee2df43c40d9f32f06ee6be",
+  "seedTxs": {
+    "mira-solis": "0x414e4894b48523bb988c1a9119ede0544b64bcd7b7eebbd91bce05769a2b13b1",
+    "kai-orbit": "0xda163d0a0da6608762824cf7d9d0dbd7ed4dd354b50e5f763b6448818cf71b18",
+    "lena-vale": "0x36e215a44f70e162a7bcd26bd847bfc19c0f73548073d9fdfea63cc46683fc0a",
+    "nox-river": "0xfdf380cabae58bdc91ab0da555f023069a398ffc7b614bc00307173fdb1c7383",
+    "aria-lune": "0x70ffc88052acccf1a81171f25c015998bf1b826b17686a3fa6d68d90156a0a2c",
+    "zane-byte": "0xe4f6d85e0ca1e98425ea96cf4da79611723a111bcdd5dd333562a4731409ae18"
+  },
+  "explorer": "https://chainscan-galileo.0g.ai/address/0xa8C216745b32B0b09bD17887dEa4CA4Ddf0bf017"
+}

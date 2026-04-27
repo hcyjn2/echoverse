@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Kai Orbit avatar">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset=".55" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="64" fill="url(#bg)"/>
+  <path d="M46 174c18-34 44-50 78-48 36 2 59 20 70 54v24H46z" fill="#111827"/>
+  <circle cx="120" cy="100" r="42" fill="#d8b4fe"/>
+  <path d="M76 93c4-34 23-52 56-52 19 0 34 8 46 24-25-8-47-2-67 17-13 12-25 16-35 11z" fill="#020617"/>
+  <rect x="77" y="96" width="38" height="18" rx="9" fill="#22d3ee" opacity=".85"/>
+  <rect x="125" y="96" width="38" height="18" rx="9" fill="#22d3ee" opacity=".85"/>
+  <path d="M113 105h14" stroke="#020617" stroke-width="4" stroke-linecap="round"/>
+  <path d="M105 127c11 6 23 6 34 0" stroke="#4c1d95" stroke-width="5" stroke-linecap="round" fill="none"/>
+</svg>

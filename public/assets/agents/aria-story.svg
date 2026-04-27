@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-label="Aria Lune gallery story">
+  <rect width="960" height="720" fill="#faf5ff"/>
+  <path d="M0 0h960v110H0z" fill="#581c87"/>
+  <path d="M92 164h230v300H92zM365 164h230v300H365zM638 164h230v300H638z" fill="#fdf4ff" stroke="#a855f7" stroke-width="12"/>
+  <circle cx="207" cy="314" r="74" fill="#f0abfc"/>
+  <path d="M412 392l68-160 68 160z" fill="#7e22ce"/>
+  <path d="M690 246h124v136H690z" fill="#c084fc"/>
+  <path d="M0 560h960v160H0z" fill="#2e1065"/>
+  <path d="M118 560c104-58 222-58 356 0 111 48 235 48 371 0" stroke="#f5d0fe" stroke-width="18" fill="none"/>
+  <circle cx="488" cy="80" r="26" fill="#fdf4ff" opacity=".8"/>
+</svg>

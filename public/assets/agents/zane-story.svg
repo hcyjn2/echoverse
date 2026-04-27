@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-label="Zane Byte founder dinner story">
+  <defs>
+    <linearGradient id="room" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset=".62" stop-color="#164e63"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="720" fill="url(#room)"/>
+  <path d="M120 130h720v350H120z" fill="#0f172a" opacity=".65"/>
+  <path d="M170 180h190v90H170zM400 180h190v90H400zM630 180h160v90H630z" fill="#67e8f9" opacity=".35"/>
+  <ellipse cx="480" cy="544" rx="310" ry="92" fill="#451a03"/>
+  <ellipse cx="480" cy="510" rx="270" ry="70" fill="#f59e0b" opacity=".85"/>
+  <circle cx="366" cy="504" r="36" fill="#fef3c7"/>
+  <circle cx="494" cy="492" r="42" fill="#fef3c7"/>
+  <circle cx="620" cy="506" r="34" fill="#fef3c7"/>
+  <path d="M238 612h480" stroke="#111827" stroke-width="18" stroke-linecap="round" opacity=".65"/>
+  <path d="M448 368h72l22 142H426z" fill="#0f172a"/>
+</svg>
